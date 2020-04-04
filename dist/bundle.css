@@ -1,2 +1,377 @@
 @import url(https://fonts.googleapis.com/css2?family=Roboto&display=swap);
-#navWrapper{background:#555}#cityInputLabel{color:#fff}#cityInput{height:26px;width:250px;padding-left:5px}.cold1{background:#04f}.cold1dark{background:#0030b3}.cold2{background:#0054ff}.cold2dark{background:#003bb3}.cold3{background:#0064ff}.cold3dark{background:#0046b3}.cold4{background:#0074ff}.cold4dark{background:#0051b3}.cold5{background:#0084ff}.cold5dark{background:#005cb3}.cold6{background:#0094ff}.cold6dark{background:#0068b3}.cold7{background:#00a4ff}.cold7dark{background:#0073b3}.cold8{background:#00b4ff}.cold8dark{background:#007eb3}.cold9{background:#00c4ff}.cold9dark{background:#0089b3}.cold10{background:#00d4ff}.cold10dark{background:#0094b3}.cold11{background:#00e4ff}.cold11dark{background:#00a0b3}.cold12{background:#00fff4}.cold12dark{background:#00b3ab}.cold13{background:#00ffd0}.cold13dark{background:#00b392}.hot1{background:#fdff00}.hot1dark{background:#b1b300}.hot2{background:#fffa00}.hot2dark{background:#b3af00}.hot3{background:#fff000}.hot3dark{background:#b3a800}.hot4{background:#ffe600}.hot4dark{background:#b3a100}.hot5{background:#ffdc00}.hot5dark{background:#b39a00}.hot6{background:#ffd200}.hot6dark{background:#b39300}.hot7{background:#ffc800}.hot7dark{background:#b38c00}.hot8{background:#ffbe00}.hot8dark{background:#b38500}.hot9{background:#ffb400}.hot9dark{background:#b37e00}.hot10{background:#fa0}.hot10dark{background:#b37700}.hot11{background:#ffa000}.hot11dark{background:#b37000}.hot12{background:#ff9600}.hot12dark{background:#b36900}.hot13{background:#ff8c00}.hot13dark{background:#b36200}.hot14{background:#ff8200}.hot14dark{background:#b35b00}.hot15{background:#ff7800}.hot15dark{background:#b35400}.hot16{background:#ff6e00}.hot16dark{background:#b34d00}.hot17{background:#ff6400}.hot17dark{background:#b34600}.hot18{background:#ff5a00}.hot18dark{background:#b33f00}.hot19{background:#ff5000}.hot19dark{background:#b33800}.hot20{background:#ff4600}.hot20dark{background:#b33100}.btn{border:none;width:50px;height:30px;cursor:pointer;border-radius:3px;font-weight:bold;color:#fff;background:skyblue;border-top:solid .5px #def2fa;border-left:solid .5px #def2fa;border-bottom:solid .5px #000;border-right:solid .5px #000}.btn.active{background:#333;border-top:none;border-left:none}.btn:hover{background:#30aadc}.btn.active:hover{background:#4d4d4d}.btnLong{width:150px}#accent{display:block;width:50px;height:50px}body{font-family:"Roboto",sans-serif;color:#fff}#app{width:800px;margin:auto;padding:1px;border-radius:5px}#app #weatherGrid{display:grid;grid-gap:1px;grid-template-columns:repeat(2, 1fr);grid-template-rows:repeat(3, 1fr)}#app #weatherGrid #locationInfo{grid-column:1/3}
+#navWrapper {
+  background: #555;
+}
+
+#cityInputLabel {
+  color: #fff;
+}
+
+#cityInput {
+  height: 26px;
+  width: 250px;
+  padding-left: 5px;
+}
+
+.cold1 {
+  background: #0044ff;
+}
+
+.cold1dark {
+  background: #0030b3;
+}
+
+.cold2 {
+  background: #0054ff;
+}
+
+.cold2dark {
+  background: #003bb3;
+}
+
+.cold3 {
+  background: #0064ff;
+}
+
+.cold3dark {
+  background: #0046b3;
+}
+
+.cold4 {
+  background: #0074ff;
+}
+
+.cold4dark {
+  background: #0051b3;
+}
+
+.cold5 {
+  background: #0084ff;
+}
+
+.cold5dark {
+  background: #005cb3;
+}
+
+.cold6 {
+  background: #0094ff;
+}
+
+.cold6dark {
+  background: #0068b3;
+}
+
+.cold7 {
+  background: #00a4ff;
+}
+
+.cold7dark {
+  background: #0073b3;
+}
+
+.cold8 {
+  background: #00b4ff;
+}
+
+.cold8dark {
+  background: #007eb3;
+}
+
+.cold9 {
+  background: #00c4ff;
+}
+
+.cold9dark {
+  background: #0089b3;
+}
+
+.cold10 {
+  background: #00d4ff;
+}
+
+.cold10dark {
+  background: #0094b3;
+}
+
+.cold11 {
+  background: #00e4ff;
+}
+
+.cold11dark {
+  background: #00a0b3;
+}
+
+.cold12 {
+  background: #00fff4;
+}
+
+.cold12dark {
+  background: #00b3ab;
+}
+
+.cold13 {
+  background: #00ffd0;
+}
+
+.cold13dark {
+  background: #00b392;
+}
+
+.hot1 {
+  background: #fdff00;
+}
+
+.hot1dark {
+  background: #b1b300;
+}
+
+.hot2 {
+  background: #fffa00;
+}
+
+.hot2dark {
+  background: #b3af00;
+}
+
+.hot3 {
+  background: #fff000;
+}
+
+.hot3dark {
+  background: #b3a800;
+}
+
+.hot4 {
+  background: #ffe600;
+}
+
+.hot4dark {
+  background: #b3a100;
+}
+
+.hot5 {
+  background: #ffdc00;
+}
+
+.hot5dark {
+  background: #b39a00;
+}
+
+.hot6 {
+  background: #ffd200;
+}
+
+.hot6dark {
+  background: #b39300;
+}
+
+.hot7 {
+  background: #ffc800;
+}
+
+.hot7dark {
+  background: #b38c00;
+}
+
+.hot8 {
+  background: #ffbe00;
+}
+
+.hot8dark {
+  background: #b38500;
+}
+
+.hot9 {
+  background: #ffb400;
+}
+
+.hot9dark {
+  background: #b37e00;
+}
+
+.hot10 {
+  background: #ffaa00;
+}
+
+.hot10dark {
+  background: #b37700;
+}
+
+.hot11 {
+  background: #ffa000;
+}
+
+.hot11dark {
+  background: #b37000;
+}
+
+.hot12 {
+  background: #ff9600;
+}
+
+.hot12dark {
+  background: #b36900;
+}
+
+.hot13 {
+  background: darkorange;
+}
+
+.hot13dark {
+  background: #b36200;
+}
+
+.hot14 {
+  background: #ff8200;
+}
+
+.hot14dark {
+  background: #b35b00;
+}
+
+.hot15 {
+  background: #ff7800;
+}
+
+.hot15dark {
+  background: #b35400;
+}
+
+.hot16 {
+  background: #ff6e00;
+}
+
+.hot16dark {
+  background: #b34d00;
+}
+
+.hot17 {
+  background: #ff6400;
+}
+
+.hot17dark {
+  background: #b34600;
+}
+
+.hot18 {
+  background: #ff5a00;
+}
+
+.hot18dark {
+  background: #b33f00;
+}
+
+.hot19 {
+  background: #ff5000;
+}
+
+.hot19dark {
+  background: #b33800;
+}
+
+.hot20 {
+  background: #ff4600;
+}
+
+.hot20dark {
+  background: #b33100;
+}
+
+.btn {
+  border: none;
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #fff;
+  background: skyblue;
+  border-top: solid 0.5px #def2fa;
+  border-left: solid 0.5px #def2fa;
+  border-bottom: solid 0.5px black;
+  border-right: solid 0.5px black;
+}
+
+.btn.active {
+  background: #333;
+  border-top: none;
+  border-left: none;
+}
+
+.btn:hover {
+  background: #30aadc;
+}
+
+.btn.active:hover {
+  background: #4d4d4d;
+}
+
+.btnLong {
+  width: 150px;
+}
+
+#accent {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: #fff;
+}
+
+#app {
+  width: 800px;
+  margin: auto;
+  padding: 1px;
+  border-radius: 5px;
+}
+#app #weatherGrid {
+  display: grid;
+  grid-gap: 1px;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+#app #weatherGrid .thick {
+  font-weight: 600;
+}
+#app #weatherGrid #locationInfo {
+  grid-column: 1/3;
+}
+#app #weatherGrid #locationInfo h2 {
+  margin-top: 30px;
+  margin-bottom: 0;
+  margin-left: 20px;
+}
+#app #weatherGrid #locationInfo p {
+  margin-top: 0;
+  margin-left: 20px;
+}
+#app #weatherGrid #cityTemperature {
+  grid-row: 2/4;
+  padding-left: 54px;
+}
+#app #weatherGrid #cityTemperature .temperature {
+  font-size: 6rem;
+  margin-top: 20px;
+  margin-bottom: 0;
+}
+#app #weatherGrid #cityTemperature .feelsLike {
+  margin: 0;
+}
+#app #weatherGrid #cityTemperature .sky {
+  margin: 0;
+  font-size: 2rem;
+}
+#app #weatherGrid #cityBarometer {
+  padding-left: 20px;
+}
+#app #weatherGrid #citySun {
+  padding: 30px 0 0 20px;
+}
+
+footer {
+  padding: 20px;
+  text-align: center;
+}
