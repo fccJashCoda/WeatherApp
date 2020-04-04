@@ -1,9 +1,4 @@
 const utilities = {
-  apiKeys: {
-    giphy: 'vxcWijwO3B1ZsvRKetrq0SAyl7CAIv7L',
-    openWeather: '91c51246c7fbfcc24a5d9360f9762751',
-  },
-
   temperatures: [
     'cold1',
     'cold2',
@@ -42,6 +37,9 @@ const utilities = {
 
   toCelsius: (fahrenheit) => (fahrenheit - 32) * (5 / 9),
   setBackgroundColor: (data, scale) => {
+    if (data.cod !== 200) {
+      return;
+    }
     const background = document.getElementById('weatherGrid');
     const accent = document.getElementById('app');
     const weatherDivs = background.querySelectorAll('div');

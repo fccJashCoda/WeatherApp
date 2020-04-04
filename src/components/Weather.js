@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { DateTime as dt } from 'luxon';
 import apiKeys from '../apiKeys';
 import SassHelper from './SassHelper';
+import ErrorPage from './ErrorPage';
 
 function Weather(props) {
   const { location, units } = props;
@@ -31,15 +32,14 @@ function Weather(props) {
 
   if (error) return <p>Error!</p>;
   if (!weather) return <p>Loading...</p>;
-  if (weather.cod !== 200)
+  if (weather.cod !== 200) {
     return (
       <>
-        <p>
-          {weather.cod}, {weather.message}
-        </p>
-        <SassHelper />
+        <ErrorPage weather={weather} />
+        <SassHelper weather={weather} units={units} />
       </>
     );
+  }
 
   const recorded = dt
     .fromSeconds(weather.dt)

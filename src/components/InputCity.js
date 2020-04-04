@@ -12,6 +12,7 @@ function CityForm() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+    if (!value) return;
     setCity(value);
     setValue('');
   };
