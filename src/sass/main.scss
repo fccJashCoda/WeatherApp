@@ -1,0 +1,33 @@
+@import '_config';
+@import '_nav';
+@import '_temperatures';
+@import '_buttons';
+
+#accent {
+  display: block;
+  width: 50px;
+  height: 50px;
+}
+
+body {
+  font-family: $fontStack;
+  color: #fff;
+}
+
+#app {
+  width: 800px;
+  margin: auto;
+  padding: 1px;
+  border-radius: 5px;
+
+  #weatherGrid {
+    display: grid;
+    grid-gap: 1px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+    #locationInfo {
+      grid-column: 1 / 3;
+    }
+  }
+}

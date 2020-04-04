@@ -1,0 +1,14 @@
+{
+  "extends": ["airbnb", "prettier"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prefer-destructuring": "warn",
+    "no-undef": "off",
+    "no-return-assign": "off",
+    "no-param-reassign": "off",
+    "no-nested-ternary": "off",
+    "react/prop-types": "warn",
+    "react/jsx-filename-extension": "off",
+    "react/jsx-one-expression-per-line": "off"
+  }
+}

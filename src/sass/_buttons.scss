@@ -1,0 +1,32 @@
+.btn {
+  border: none;
+  width: 50px;
+  height: 30px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: bold;
+  color: #fff;
+  background: skyblue;
+  border-top: solid 0.5px lighten(skyblue, 20%);
+  border-left: solid 0.5px lighten(skyblue, 20%);
+  border-bottom: solid 0.5px darken(#333, 20%);
+  border-right: solid 0.5px darken(#333, 20%);
+}
+
+.btn.active {
+  background: #333;
+  border-top: none;
+  border-left: none;
+}
+
+.btn:hover {
+  background: darken(skyblue, 20%);
+}
+
+.btn.active:hover {
+  background: lighten(#333, 10%);
+}
+
+.btnLong {
+  width: 150px;
+}
