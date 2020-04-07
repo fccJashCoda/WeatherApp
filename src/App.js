@@ -19,5 +19,7 @@ export default App;
   [x] implement a background color shift or/and
   [x] implement a giphy fetch on weather description
   [x] Fix timezones on fetch with Luxon
-  [ ] design
+  [x] Fix proptypes
+  [x] design
+  [x] Implement geolocation
 */

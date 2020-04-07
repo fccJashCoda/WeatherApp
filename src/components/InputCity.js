@@ -1,10 +1,25 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import Weather from './Weather';
 
 function CityForm() {
   const [value, setValue] = useState('');
   const [city, setCity] = useState('Luxembourg, LU');
+  const [error, setError] = useState();
   const [active, setActive] = useState('metric');
+
+  useEffect(() => {
+    async function localize() {
+      setError();
+      const response = await fetch('http://ip-api.com/json/')
+        .then((res) => res.json())
+        .catch((err) => setError(err));
+      if (!error && response.status === 'success') {
+        const result = `${response.city}, ${response.country}`;
+        setCity(result);
+      }
+    }
+    localize();
+  }, []);
 
   const handleActive = (e) => {
     setActive(e.target.name);

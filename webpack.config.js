@@ -1,9 +1,14 @@
 const path = require('path');
 const sass = require('sass');
+const webpack = require('webpack');
+const Dotenv = require('dotenv-webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+  node: {
+    fs: 'empty',
+  },
   mode: 'development',
   entry: './src/index.js',
   output: {
@@ -49,6 +54,14 @@ module.exports = {
     ],
   },
   plugins: [
+    new webpack.EnvironmentPlugin({
+      NODE_ENV: 'development',
+      DEBUG: false,
+    }),
+    new Dotenv({
+      path: './.env',
+      safe: true,
+    }),
     new HtmlWebpackPlugin({
       template: './src/index.html',
       filename: './index.html',

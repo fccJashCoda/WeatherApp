@@ -3,10 +3,9 @@ import ReactDOM from 'react-dom';
 
 import 'regenerator-runtime/runtime';
 import 'core-js/stable';
+import './sass/main.scss';
 
 import App from './App';
-
-import './sass/main.scss';
 
 const root = document.getElementById('app');
 

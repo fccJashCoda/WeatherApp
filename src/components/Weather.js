@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import PropTypes from 'prop-types';
 import { DateTime as dt } from 'luxon';
-import apiKeys from '../apiKeys';
 import SassHelper from './SassHelper';
 import ErrorPage from './ErrorPage';
 
@@ -9,21 +9,10 @@ function Weather(props) {
   const [weather, setWeather] = useState();
   const [error, setError] = useState();
 
-  const scales = {
-    metric: {
-      symbol: 'C',
-      speedUnit: 'km/h',
-    },
-    imperial: {
-      symbol: 'F',
-      speedUnit: 'mp/h',
-    },
-  };
-
   useEffect(() => {
     setError();
     fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=${units}&appid=${apiKeys.openWeather}`
+      `http://api.openweathermap.org/data/2.5/weather?q=${location}&units=${units}&appid=${process.env.OPENWEATHER_API_KEY}`
     )
       .then((res) => res.json())
       .then((res) => setWeather(res))
@@ -41,6 +30,16 @@ function Weather(props) {
     );
   }
 
+  const scales = {
+    metric: {
+      symbol: 'C',
+      speedUnit: 'km/h',
+    },
+    imperial: {
+      symbol: 'F',
+      speedUnit: 'mp/h',
+    },
+  };
   const recorded = dt
     .fromSeconds(weather.dt)
     .toUTC()
@@ -129,5 +128,10 @@ function Weather(props) {
     </>
   );
 }
+
+Weather.propTypes = {
+  location: PropTypes.string.isRequired,
+  units: PropTypes.string.isRequired,
+};
 
 export default Weather;

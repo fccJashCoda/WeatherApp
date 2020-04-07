@@ -1,4 +1,5 @@
 import React, { useEffect } from 'react';
+import PropTypes from 'prop-types';
 import utilities from '../config';
 
 const { setBackgroundColor } = utilities;
@@ -17,4 +18,8 @@ function SassHelper(props) {
   );
 }
 
+SassHelper.propTypes = {
+  weather: PropTypes.object.isRequired,
+  units: PropTypes.string.isRequired,
+};
 export default SassHelper;
